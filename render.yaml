@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: y-sharp
+    runtime: docker
+    plan: starter          # free instances sleep + block long downloads; starter is safer
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: YSHARP_MAX_CONCURRENT
+        value: "2"
+      - key: YSHARP_FILE_TTL
+        value: "1800"          # files self-destruct after 30 min
+      - key: YSHARP_MAX_DURATION
+        value: "14400"
+      - key: YSHARP_RATE_LIMIT
+        value: "20"
+      # Optional: paste a Netscape cookies.txt as base64 to beat bot checks
+      - key: YSHARP_COOKIES_B64
+        sync: false
+      # Optional: residential proxy for datacenter-IP blocks
+      - key: YSHARP_PROXY
+        sync: false

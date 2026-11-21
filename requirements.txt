@@ -1,0 +1,5 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+yt-dlp>=2026.10.26
+bgutil-ytdlp-pot-provider>=2.0.2,<3  # optional PO-token client plugin (only used with a provider server)
+imageio-ffmpeg>=0.5   # fallback ffmpeg binary when the host has none

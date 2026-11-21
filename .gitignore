@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+*.mp3
+*.mp4
+.env
+cookies.txt
+.DS_Store
